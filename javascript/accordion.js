@@ -14,8 +14,5 @@
 */
 
 $('.accordion-menu .item a').click(function() {
-  var theul = $(this).next('ul');
-  if (theul.length > 0) {
-    theul.slideToggle()
-  }
+  $(this).next('ul').slideToggle()
 });
