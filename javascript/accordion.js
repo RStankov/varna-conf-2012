@@ -27,7 +27,6 @@ $('.accordion-menu .item a').each(function() {
         var theli = dropa.parent('li');
         theli.animate({'padding-bottom': '20px'});
       }
-    } else {
     }
   });
 });
