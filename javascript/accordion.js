@@ -19,12 +19,10 @@ $('.accordion-menu .item a').click(function() {
   if (theul.length > 0) {
     if (theul.css('display') == 'none') {
       theul.slideDown();
-      var theli = dropa.parent('li');
-      theli.animate({'padding-bottom': '20px'});
     } else {
       theul.slideUp(); 
-      var theli = dropa.parent('li');
-      theli.animate({'padding-bottom': '20px'});
     }
+    var theli = dropa.parent('li');
+    theli.animate({'padding-bottom': '20px'});
   }
 });
