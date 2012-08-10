@@ -3,8 +3,8 @@
 
   <ul class="accordion-menu">
     <li class="item">
-      <a href="#" class="section-1">Section 1</a>
-      <ul id="section-1">
+      <a href="#">Section 1</a>
+      <ul>
         <li>...</li> 
         <li>...</li>
         <li>...</li>
@@ -14,8 +14,7 @@
 */
 
 $('.accordion-menu .item a').click(function() {
-  var title = this.className;
-  var theul = $('#' + title);
+  var theul = $(this).next('ul');
   if (theul.length > 0) {
     theul.slideToggle()
   }
