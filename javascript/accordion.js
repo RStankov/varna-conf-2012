@@ -13,6 +13,6 @@
   </ul>
 */
 
-$('.accordion-menu .item a').live('click', function() {
+$('.accordion-menu .item a').click(function() {
   $(this).next('ul').slideToggle()
 });
