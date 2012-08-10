@@ -17,10 +17,6 @@ $('.accordion-menu .item a').click(function() {
   var title = this.className;
   var theul = $('#' + title);
   if (theul.length > 0) {
-    if (theul.css('display') == 'none') {
-      theul.slideDown();
-    } else {
-      theul.slideUp(); 
-    }
+    theul.slideToggle()
   }
 });
