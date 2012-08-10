@@ -15,15 +15,15 @@ class FriendImages
   private
 
   def friends
-    Friendship.where(user_id: @user.id).pluck('friend_id')
+    Friendship.friend_ids_of(@user)
   end
 
   def find_images_of(friends)
-    Image.where(user_id: friends, visible_to_friends: true)
+    Image.of(friends)
   end
 
   def apply_age_restritions_to(images)
-    images.where('minimum_age >= ?', @user.age)
+    images.appropriate_for(@user.age)
   end
 
   def order_by(sorting)
@@ -31,7 +31,7 @@ class FriendImages
   end
 
   def paginate(page)
-    images.limit(PER_PAGE).offset(page.to_i.abs * PER_PAGE)
+    images.paginate(page)
   end
 
   def decorate(images)
