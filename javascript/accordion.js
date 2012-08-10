@@ -22,7 +22,5 @@ $('.accordion-menu .item a').click(function() {
     } else {
       theul.slideUp(); 
     }
-    var theli = dropa.parent('li');
-    theli.animate({'padding-bottom': '20px'});
   }
 });
